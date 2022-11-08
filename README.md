@@ -1,5 +1,5 @@
 # react-native-blur-background
-Blur background component with react-native-skia
+Blur background component with @shopify/react-native-skia
 
 npm i react-native-blur-background --save
 
