@@ -1,0 +1,62 @@
+{
+  "name": "react-native-blur-background",
+  "version": "0.1.0",
+  "description": "Blur background component with react-native-skia",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "lint": "eslint --ext .tsx --ext .ts src/",
+    "format": "prettier --check ./src",
+    "start": "rm -rf Develop/dist && tsc -w --outDir Develop/dist",
+    "prepare": "rm -rf dist && tsc"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --ext .tsx --ext .ts src/ --fix"
+    ],
+    "./src/**": [
+      "prettier --write ."
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goheroes/react-native-blur-background.git"
+  },
+  "keywords": [
+    "react-native",
+    "blur",
+    "background"
+  ],
+  "author": "goheroes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/goheroes/react-native-blur-background/issues"
+  },
+  "homepage": "https://github.com/goheroes/react-native-blur-background#readme",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "@shopify/react-native-skia": "0.1.155"
+  },
+  "devDependencies": {
+    "@types/react": "*",
+    "@types/react-native": "*",
+    "@typescript-eslint/eslint-plugin": "2.25.0",
+    "@typescript-eslint/parser": "2.25.0",
+    "eslint": "6.8.0",
+    "eslint-plugin-prettier": "3.1.2",
+    "eslint-plugin-react": "7.19.0",
+    "eslint-plugin-react-hooks": "2.5.1",
+    "husky": "4.2.3",
+    "lint-staged": "10.0.9",
+    "prettier": "2.0.2",
+    "react": "*",
+    "react-native": "*",
+    "typescript": "^3.9.10"
+  }
+}
